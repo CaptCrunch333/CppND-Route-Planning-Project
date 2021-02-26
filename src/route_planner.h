@@ -4,8 +4,8 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <algorithm>
 #include "route_model.h"
-
 
 class RoutePlanner {
   public:
@@ -28,6 +28,11 @@ class RoutePlanner {
 
     float distance = 0.0f;
     RouteModel &m_Model;
+
+    struct { 
+      bool operator()(RouteModel::Node* a, RouteModel::Node* b) const { return ((a->g_value + a->h_value) < (b->g_value + b->h_value));}
+    } customSort;
+
 };
 
 #endif

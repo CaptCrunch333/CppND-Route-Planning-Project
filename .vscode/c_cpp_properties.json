@@ -1,0 +1,16 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "../CppND-Route-Planning-Project/**",
+                "/usr/local/include/io2d/**",
+                "/usr/include/cairo/**"
+            ],
+            //"compilerPath": "/usr/bin/clang",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "clang-x64"
+        }
+    ],
+    "version": 4
+}
